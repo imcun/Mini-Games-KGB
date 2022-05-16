@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Games KGB</title>
+</head>
+<body>
+    <div id="app">
+        <div class="summary">
+        <h1 class="title"> MATCH RESULT</h1>
+        <h1 class="result"></h1>
+    </div>
+        <div class="games">
+            <div class="option" onclick="pickOption('≧◉ᴥ◉≦👋')">≧◉ᴥ◉≦👋</div>
+            <div class="option" onclick="pickOption('( ͡❛ ͜ʖ͡❛ )✌️')">( ͡❛ ͜ʖ͡❛ )✌️</div>
+            <div class="option" onclick="pickOption('( ͡❛ ͜ʖ ͡❛)✊')">( ͡❛ ͜ʖ ͡❛)✊</div>
+        </div>
+
+    <script>
+        class Start{
+            constructor(){
+                this.playerName = "Ente"
+                this.botName = "Im Bot"
+                this.playerOption;
+                this.botOption;
+                this.winner = ""
+            }
+
+            get getBotOption(){
+                return this.botOption;
+            }
+
+            set setBotOption(option){
+                this.botOption = option;
+            }
+
+            get getPlayerOption(){
+                return this.playerOption
+            }
+
+            set PlayerOption (option){
+                this.playerOption = option;
+            }
+
+            botBrain(){
+                const option = [">≧◉ᴥ◉≦👋", "( ͡❛ ͜ʖ͡❛ )✌️", "( ͡❛ ͜ʖ ͡❛)✊"];
+                const bot = option[Math.floor(Math.random() * option.length)];
+                //console.log("bot pilih: ", bot.toString());
+                return bot;
+            }
+
+            winCalculation(){
+                if(this.){
+
+                }
+            }
+        }
+
+        function pickOption(params){
+                //console.log("clicked option", params)
+                //const playerOption = params;
+                const start = new Start();
+                //start.playerName;
+               // start.botName;
+                start.PlayerOption = params;
+                start.setBotOption = start.botBrain();
+
+                console.log ("Pilihan Ente: ",start.getPlayerOption);
+                console.log ("bot pilih: ", start.getBotOption);
+        }
+    
+    </script>
+</body>
+</html>
